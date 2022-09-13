@@ -9,13 +9,102 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        ZStack {
-            Color.red
-         }    }
+        ScrollView (showsIndicators: false){
+            CountdownView()
+            
+            // Cart
+            Text("My Rift")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            
+            // Items
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(0 ..< 8) {item in
+                        CartItemView()
+                    }
+                }
+            }
+        }
+    }
 }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+    }
+}
+
+struct CartItemView: View {
+    var body: some View {
+        RoundedRectangle(cornerRadius: 20)
+            .fill(Color.gray)
+            .frame(width: 200, height: 300)
+            .padding(.all)
+    }
+}
+
+struct CountdownView: View {
+    var body: some View {
+        VStack (alignment: .leading, spacing: 16.0) {
+            HStack {
+                Text("11")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+                    .padding([.top, .leading])
+                Text("Hours")
+                    .font(.body)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+                    .padding(.top)
+            }
+            HStack {
+                Text("8")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+                    .padding([.leading])
+                Text("Hours")
+                    .font(.body)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+            }
+            HStack {
+                Text("12")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+                    .padding([.leading])
+                Text("Minutes")
+                    .font(.body)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+            }
+            HStack {
+                Spacer()
+                Button(action: {}){
+                    Text("Schedule Return")
+                        .font(.title2)
+                        .bold()
+                        .padding(12)
+                        .foregroundColor(Color.white)
+                        .background(Color.black)
+                        .cornerRadius(12)
+                }
+                .padding([.leading, .bottom, .trailing])
+                Spacer()
+            }
+        }
+        .frame(
+            minWidth: 0,
+            maxWidth: 350,
+            minHeight: 0,
+            maxHeight: 350,
+            alignment: .topLeading
+        )
+        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.gray/*@END_MENU_TOKEN@*/)
+        .cornerRadius(30.0)
+        .padding(.all)
     }
 }
