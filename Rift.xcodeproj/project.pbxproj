@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E98F7B6628CF786A007A6024 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B6528CF786A007A6024 /* Tests_iOS.swift */; };
-		E98F7B6828CF786A007A6024 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B6728CF786A007A6024 /* Tests_iOSLaunchTests.swift */; };
-		E98F7B7228CF786A007A6024 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B7128CF786A007A6024 /* Tests_macOS.swift */; };
-		E98F7B7428CF786A007A6024 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B7328CF786A007A6024 /* Tests_macOSLaunchTests.swift */; };
 		E98F7B7528CF786A007A6024 /* RiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B4D28CF7867007A6024 /* RiftApp.swift */; };
 		E98F7B7628CF786A007A6024 /* RiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B4D28CF7867007A6024 /* RiftApp.swift */; };
 		E98F7B7728CF786A007A6024 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B4E28CF7867007A6024 /* ContentView.swift */; };
 		E98F7B7828CF786A007A6024 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B4E28CF7867007A6024 /* ContentView.swift */; };
 		E98F7B7928CF786A007A6024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E98F7B4F28CF786A007A6024 /* Assets.xcassets */; };
 		E98F7B7A28CF786A007A6024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E98F7B4F28CF786A007A6024 /* Assets.xcassets */; };
+		E98F7B9528CF8CBC007A6024 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B9428CF8CBC007A6024 /* Home.swift */; };
+		E98F7B9728CF8CC4007A6024 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B9628CF8CC4007A6024 /* Search.swift */; };
+		E98F7B9928CF8CCD007A6024 /* Closet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B9828CF8CCD007A6024 /* Closet.swift */; };
+		E98F7B9B28CF8CD3007A6024 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B9A28CF8CD3007A6024 /* Account.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +42,12 @@
 		E98F7B4F28CF786A007A6024 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E98F7B5428CF786A007A6024 /* Rift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98F7B5A28CF786A007A6024 /* Rift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E98F7B5C28CF786A007A6024 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		E98F7B6128CF786A007A6024 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E98F7B6528CF786A007A6024 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
-		E98F7B6728CF786A007A6024 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
 		E98F7B6D28CF786A007A6024 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E98F7B7128CF786A007A6024 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
-		E98F7B7328CF786A007A6024 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		E98F7B9428CF8CBC007A6024 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		E98F7B9628CF8CC4007A6024 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		E98F7B9828CF8CCD007A6024 /* Closet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closet.swift; sourceTree = "<group>"; };
+		E98F7B9A28CF8CD3007A6024 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				E98F7B4C28CF7867007A6024 /* Shared */,
-				E98F7B5B28CF786A007A6024 /* macOS */,
-				E98F7B6428CF786A007A6024 /* Tests iOS */,
-				E98F7B7028CF786A007A6024 /* Tests macOS */,
 				E98F7B5528CF786A007A6024 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +93,7 @@
 		E98F7B4C28CF7867007A6024 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E98F7B8928CF8BF2007A6024 /* Views */,
 				E98F7B4D28CF7867007A6024 /* RiftApp.swift */,
 				E98F7B4E28CF7867007A6024 /* ContentView.swift */,
 				E98F7B4F28CF786A007A6024 /* Assets.xcassets */,
@@ -115,30 +112,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E98F7B5B28CF786A007A6024 /* macOS */ = {
+		E98F7B8928CF8BF2007A6024 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E98F7B5C28CF786A007A6024 /* macOS.entitlements */,
+				E98F7B9428CF8CBC007A6024 /* Home.swift */,
+				E98F7B9628CF8CC4007A6024 /* Search.swift */,
+				E98F7B9828CF8CCD007A6024 /* Closet.swift */,
+				E98F7B9A28CF8CD3007A6024 /* Account.swift */,
 			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
-		E98F7B6428CF786A007A6024 /* Tests iOS */ = {
-			isa = PBXGroup;
-			children = (
-				E98F7B6528CF786A007A6024 /* Tests_iOS.swift */,
-				E98F7B6728CF786A007A6024 /* Tests_iOSLaunchTests.swift */,
-			);
-			path = "Tests iOS";
-			sourceTree = "<group>";
-		};
-		E98F7B7028CF786A007A6024 /* Tests macOS */ = {
-			isa = PBXGroup;
-			children = (
-				E98F7B7128CF786A007A6024 /* Tests_macOS.swift */,
-				E98F7B7328CF786A007A6024 /* Tests_macOSLaunchTests.swift */,
-			);
-			path = "Tests macOS";
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,8 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E98F7B9928CF8CCD007A6024 /* Closet.swift in Sources */,
 				E98F7B7728CF786A007A6024 /* ContentView.swift in Sources */,
+				E98F7B9728CF8CC4007A6024 /* Search.swift in Sources */,
+				E98F7B9528CF8CBC007A6024 /* Home.swift in Sources */,
 				E98F7B7528CF786A007A6024 /* RiftApp.swift in Sources */,
+				E98F7B9B28CF8CD3007A6024 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +303,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E98F7B6828CF786A007A6024 /* Tests_iOSLaunchTests.swift in Sources */,
-				E98F7B6628CF786A007A6024 /* Tests_iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,8 +310,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E98F7B7428CF786A007A6024 /* Tests_macOSLaunchTests.swift in Sources */,
-				E98F7B7228CF786A007A6024 /* Tests_macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +451,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -499,6 +482,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
