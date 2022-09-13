@@ -37,10 +37,10 @@ struct Home_Previews: PreviewProvider {
 
 struct CartItemView: View {
     var body: some View {
-        RoundedRectangle(cornerRadius: 20)
-            .fill(Color.gray)
+        RoundedRectangle(cornerRadius: 15)
+            .fill(Color(hue: 0.866, saturation: 0.0, brightness: 0.806))
             .frame(width: 200, height: 300)
-            .padding(.all)
+            .padding(.trailing)
     }
 }
 
@@ -51,35 +51,35 @@ struct CountdownView: View {
                 Text("11")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.black)
                     .padding([.top, .leading])
-                Text("Hours")
+                Text("Days")
                     .font(.body)
                     .fontWeight(.bold)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.black)
                     .padding(.top)
             }
             HStack {
                 Text("8")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.black)
                     .padding([.leading])
                 Text("Hours")
                     .font(.body)
                     .fontWeight(.bold)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.black)
             }
             HStack {
                 Text("12")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.black)
                     .padding([.leading])
                 Text("Minutes")
                     .font(.body)
                     .fontWeight(.bold)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.black)
             }
             HStack {
                 Spacer()
@@ -98,13 +98,13 @@ struct CountdownView: View {
         }
         .frame(
             minWidth: 0,
-            maxWidth: 350,
+            maxWidth: 325,
             minHeight: 0,
             maxHeight: 350,
             alignment: .topLeading
         )
-        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.gray/*@END_MENU_TOKEN@*/)
-        .cornerRadius(30.0)
+        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(hue: 1.0, saturation: 0.0, brightness: 0.805)/*@END_MENU_TOKEN@*/)
+        .cornerRadius(12.0)
         .padding(.all)
     }
 }
