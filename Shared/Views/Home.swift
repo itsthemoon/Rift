@@ -8,34 +8,8 @@
 import SwiftUI
 
 struct Home: View {
-    @State var showAccount = false
-
     var body: some View {
-        if showAccount {
-            Account(prevPage: "Home")
-        } else {
         VStack {
-            ZStack {
-                HStack {
-                    Image(systemName: "shippingbox")
-                        .padding(.leading, 15.0)
-                    Spacer()
-                }
-                HStack {
-                    Text("Home")
-                }
-                HStack {
-                    Spacer()
-                        Button(action: {self.showAccount = true
-                        }){
-                            // Button design
-                            Image(systemName: "person")
-                                .padding(.trailing, 15.0)
-                                .foregroundColor(Color.black)
-                            }
-                        }
-                    }
-
         ScrollView (showsIndicators: false){
             CountdownView()
     
@@ -56,7 +30,6 @@ struct Home: View {
             }
         }
     }
-}
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
