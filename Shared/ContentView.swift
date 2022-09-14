@@ -16,7 +16,6 @@ struct ContentView: View {
     var body: some View {
         VStack {
             ZStack {
-                
                 switch selectedIndex {
                 case 0:
                     Home()
@@ -24,13 +23,13 @@ struct ContentView: View {
                     Search()
                 case 2:
                     Closet()
+                case 3:
+                    Account()
                 default:
                     Text("Remaining tabs")
                 }
             }
-            
             Spacer()
-            
             HStack {
             ForEach(0..<3) { num in
                 Button(action: {
@@ -41,11 +40,10 @@ struct ContentView: View {
                         .foregroundColor(selectedIndex == num ? Color(.label) : .init(white: 0.8))
                         .font(.system(size: 24))
                     Spacer()
-                })
+                    })
+                }
             }
         }
-        }
-        
     }
 }
 

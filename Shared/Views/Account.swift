@@ -8,7 +8,31 @@
 import SwiftUI
 
 struct Account: View {
+    var prevPage: String?
+    @State var exit = false
+    
     var body: some View {
+        if !exit {
+        VStack {
+            ZStack {
+                HStack {
+                    Button(action: {exit = true
+                    }){
+                    Image(systemName: "xmark")
+                        .padding(.leading, 15.0)
+                        .foregroundColor(Color.black)
+
+                    Spacer()
+                    }
+                }
+                HStack {
+                    Text("My Account")
+                        .fontWeight(.light)
+                        .multilineTextAlignment(.center)
+                }
+            }
+            
+
         ScrollView {
             VStack {
                 Text("Current Balance")
@@ -35,10 +59,23 @@ struct Account: View {
             }
         }
     }
+        } else {
+            switch prevPage {
+            case "Home":
+                Home()
+            case "Search":
+                Search()
+            case "Closet":
+                Closet()
+            default:
+                Account()
+        }
+    }
 }
 
 struct Account_Previews: PreviewProvider {
     static var previews: some View {
         Account()
+        }
     }
 }
