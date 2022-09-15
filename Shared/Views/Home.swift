@@ -41,8 +41,8 @@ struct CartItemView: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 15)
             .fill(Color(hue: 0.866, saturation: 0.0, brightness: 0.806))
-            .frame(width: 200, height: 300)
-            .padding(.trailing)
+            .frame(width: 300, height: 400)
+            .padding(.horizontal)
     }
 }
 
@@ -92,7 +92,7 @@ struct CountdownView: View {
                         .padding(12)
                         .foregroundColor(Color.white)
                         .background(Color.black)
-                        .cornerRadius(12)
+                        .cornerRadius(20)
                 }
                 .padding([.leading, .bottom, .trailing])
                 Spacer()

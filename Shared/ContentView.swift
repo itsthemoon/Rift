@@ -111,7 +111,6 @@ struct ContentView: View {
                 }
             }
             Spacer()
-            
             HStack {
             ForEach(0..<3) { num in
                 Button(action: {
