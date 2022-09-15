@@ -87,4 +87,4 @@ struct Search_Previews: PreviewProvider {
         Search()
     }
 }
-}
+

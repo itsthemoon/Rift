@@ -39,3 +39,4 @@ struct ClosetView: View {
         }
     }
 }
+}
