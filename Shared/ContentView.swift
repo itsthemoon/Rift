@@ -28,9 +28,7 @@ struct ContentView: View {
                     Text("Remaining tabs")
                 }
             }
-            
             Spacer()
-            
             HStack {
             ForEach(0..<3) { num in
                 Button(action: {
