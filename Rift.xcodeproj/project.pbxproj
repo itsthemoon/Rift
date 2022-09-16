@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5262158A28D3940700C89D2A /* HowItWorks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5262158928D3940700C89D2A /* HowItWorks.swift */; };
 		E98F7B7528CF786A007A6024 /* RiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B4D28CF7867007A6024 /* RiftApp.swift */; };
 		E98F7B7628CF786A007A6024 /* RiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B4D28CF7867007A6024 /* RiftApp.swift */; };
 		E98F7B7728CF786A007A6024 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B4E28CF7867007A6024 /* ContentView.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5262158928D3940700C89D2A /* HowItWorks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorks.swift; sourceTree = "<group>"; };
 		E98F7B4D28CF7867007A6024 /* RiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiftApp.swift; sourceTree = "<group>"; };
 		E98F7B4E28CF7867007A6024 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E98F7B4F28CF786A007A6024 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				E98F7B9628CF8CC4007A6024 /* Search.swift */,
 				E98F7B9828CF8CCD007A6024 /* Closet.swift */,
 				E98F7B9A28CF8CD3007A6024 /* Account.swift */,
+				5262158928D3940700C89D2A /* HowItWorks.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				E98F7B9728CF8CC4007A6024 /* Search.swift in Sources */,
 				E98F7B9528CF8CBC007A6024 /* Home.swift in Sources */,
 				E98F7B7528CF786A007A6024 /* RiftApp.swift in Sources */,
+				5262158A28D3940700C89D2A /* HowItWorks.swift in Sources */,
 				E98F7B9B28CF8CD3007A6024 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,7 +449,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3N5P5RXK8B;
+				DEVELOPMENT_TEAM = SR38NT6P89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -476,7 +480,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3N5P5RXK8B;
+				DEVELOPMENT_TEAM = SR38NT6P89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
