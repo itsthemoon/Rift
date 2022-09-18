@@ -11,10 +11,16 @@ struct Search: View {
     
     var body: some View {
         ScrollView (showsIndicators: false){
-            Text("Categories")
-                .font(.title)
-                .fontWeight(.bold)
-                .padding(.vertical)
+            Image("screenshot2")
+                .resizable()
+                .scaledToFill()
+                .overlay(
+                    Text("Categories")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .foregroundColor(Color.white)
+                )
             
             // Items
             ScrollView(.horizontal, showsIndicators: false) {
@@ -24,10 +30,17 @@ struct Search: View {
                     }
                 }
             }
-            Text("Pick For You")
-                .font(.title)
-                .fontWeight(.bold)
-                .padding(.vertical)
+            Divider()
+            Image("screenshot2")
+                .resizable()
+                .scaledToFit()
+                .overlay(
+                    Text("Pick For You")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .foregroundColor(Color.white)
+                )
             
             // Items
             ScrollView(.horizontal, showsIndicators: false) {
@@ -37,10 +50,17 @@ struct Search: View {
                     }
                 }
             }
-            Text("Collections")
-                .font(.title)
-                .fontWeight(.bold)
-                .padding(.vertical)
+            Divider()
+            Image("screenshot2")
+                .resizable()
+                .scaledToFit()
+                .overlay(
+                    Text("Collections")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .foregroundColor(Color.white)
+                )
             
             // Items
             ScrollView(.horizontal, showsIndicators: false) {
@@ -60,7 +80,6 @@ struct CategoryCard: View {
         RoundedRectangle(cornerRadius: 15)
             .fill(Color(hue: 0.866, saturation: 0.0, brightness: 0.806))
             .frame(width: 250, height: 250)
-            .padding(.horizontal)
     }
 }
 
@@ -69,7 +88,6 @@ struct ItemCard: View {
         RoundedRectangle(cornerRadius: 15)
             .fill(Color(hue: 0.866, saturation: 0.0, brightness: 0.806))
             .frame(width: 200, height: 280)
-            .padding(.horizontal)
     }
 }
 
@@ -78,7 +96,6 @@ struct CollectionCard: View {
         RoundedRectangle(cornerRadius: 15)
             .fill(Color(hue: 0.866, saturation: 0.0, brightness: 0.806))
             .frame(width: 300, height: 300)
-            .padding(.horizontal)
     }
 }
 
