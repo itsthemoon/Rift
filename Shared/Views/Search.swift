@@ -10,6 +10,7 @@ import SwiftUI
 struct Search: View {
     
     var body: some View {
+        
         ScrollView (showsIndicators: false){
             Text("Categories")
                 .font(.title)
