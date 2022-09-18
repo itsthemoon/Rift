@@ -8,41 +8,61 @@
 import SwiftUI
 
 struct Home: View {
+    private func getScale(proxy: GeometryProxy) -> CGFloat {
+        var scale: CGFloat = 1
+        let screenSize: CGFloat = UIScreen.main.bounds.width
+        
+        //access phone screen size/2 oinstead of 215
+        let x = abs((screenSize * 0.5) - proxy.frame(in: .global).midX)
+    
+        if x < 100  {
+            scale = 1 + (100 - x) / 500
+        }
+        
+        return scale
+    }
+    
     var body: some View {
         VStack {
-        ScrollView (showsIndicators: false){
-            CountdownView()
-    
-            // Cart
-            Text("My Rift")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            
-            // Items
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(0 ..< 8) {item in
-                        CartItemView()
+            ScrollView (showsIndicators: false){
+                CountdownView()
+                
+                // Cart
+                Text("My Rift")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                
+                // Items
+                NavigationView {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 64) {
+                            ForEach(0 ..< 30) { num in
+                                GeometryReader { proxy in
+                                    
+                                    let scale = getScale(proxy: proxy)
+                                    
+                                    Image("screenshot")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .cornerRadius(20)
+                                        .clipped()
+                                        .scaleEffect(CGSize(width: scale, height: scale))
+                                    let x = abs(215 - proxy.frame(in: .global).midX)
+                                }
+                                .frame(width: 250, height: 300)
                             }
                         }
+                        .padding(32)
                     }
                 }
             }
         }
     }
+}
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
-    }
-}
-
-struct CartItemView: View {
-    var body: some View {
-        RoundedRectangle(cornerRadius: 15)
-            .fill(Color(hue: 0.866, saturation: 0.0, brightness: 0.806))
-            .frame(width: 300, height: 400)
-            .padding(.horizontal)
     }
 }
 

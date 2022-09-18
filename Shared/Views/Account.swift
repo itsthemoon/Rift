@@ -45,7 +45,7 @@ struct Account: View {
                     .padding(.vertical)
                 NavigationView{
                     Form{
-                        Section(header: Text("Help + Support")){
+                        Section(header: Text("Help & Support")){
                             Button("How It Works") {
                                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                             }
@@ -80,6 +80,13 @@ struct Account: View {
                 }
                 .padding(.top)
             }
+            Button("Sign Out") {
+                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+            }
+            .padding()
+            .background(Color(hue: 0.866, saturation: 0.0, brightness: 0.806))
+            .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
+            .cornerRadius(/*@START_MENU_TOKEN@*/15.0/*@END_MENU_TOKEN@*/)
         }
         .background(Color(red: 0.9490196078431372, green: 0.9490196078431372, blue: 0.9647058823529412))
     }
