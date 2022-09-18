@@ -35,21 +35,14 @@ struct Home: View {
                 // Items
                 NavigationView {
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 64) {
+                        HStack(spacing: 8) {
                             ForEach(0 ..< 30) { num in
-                                GeometryReader { proxy in
-                                    
-                                    let scale = getScale(proxy: proxy)
-                                    
                                     Image("screenshot")
                                         .resizable()
                                         .scaledToFit()
                                         .cornerRadius(20)
                                         .clipped()
-                                        .scaleEffect(CGSize(width: scale, height: scale))
-                                    let x = abs(215 - proxy.frame(in: .global).midX)
-                                }
-                                .frame(width: 250, height: 300)
+                                        .frame(width: 300, height: 400)
                             }
                         }
                         .padding(32)
@@ -107,27 +100,15 @@ struct CountdownView: View {
                 Spacer()
                 Button(action: {}){
                     Text("Schedule Return")
-                        .font(.title2)
-                        .bold()
-                        .padding(12)
-                        .foregroundColor(Color.white)
-                        .background(Color.black)
-                        .cornerRadius(20)
                 }
+                .buttonStyle(.borderedProminent)
+                .tint(.black)
                 .padding([.leading, .bottom, .trailing])
                 Spacer()
             }
+            
+            Divider()
         }
-        .frame(
-            minWidth: 0,
-            maxWidth: 325,
-            minHeight: 0,
-            maxHeight: 350,
-            alignment: .topLeading
-        )
-        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(hue: 1.0, saturation: 0.0, brightness: 0.805)/*@END_MENU_TOKEN@*/)
-        .cornerRadius(12.0)
-        .padding(.all)
     }
 }
 

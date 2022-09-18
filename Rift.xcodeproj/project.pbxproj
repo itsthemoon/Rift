@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5262158A28D3940700C89D2A /* HowItWorks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5262158928D3940700C89D2A /* HowItWorks.swift */; };
+		5262158D28D578CA00C89D2A /* SnapToScroll in Frameworks */ = {isa = PBXBuildFile; productRef = 5262158C28D578CA00C89D2A /* SnapToScroll */; };
 		E98F7B7528CF786A007A6024 /* RiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B4D28CF7867007A6024 /* RiftApp.swift */; };
 		E98F7B7628CF786A007A6024 /* RiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B4D28CF7867007A6024 /* RiftApp.swift */; };
 		E98F7B7728CF786A007A6024 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B4E28CF7867007A6024 /* ContentView.swift */; };
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5262158D28D578CA00C89D2A /* SnapToScroll in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +144,9 @@
 			dependencies = (
 			);
 			name = "Rift (iOS)";
+			packageProductDependencies = (
+				5262158C28D578CA00C89D2A /* SnapToScroll */,
+			);
 			productName = "Rift (iOS)";
 			productReference = E98F7B5428CF786A007A6024 /* Rift.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +239,9 @@
 				Base,
 			);
 			mainGroup = E98F7B4728CF7867007A6024;
+			packageReferences = (
+				5262158B28D578C900C89D2A /* XCRemoteSwiftPackageReference "hstack-snap-to-scroll" */,
+			);
 			productRefGroup = E98F7B5528CF786A007A6024 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -689,6 +697,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5262158B28D578C900C89D2A /* XCRemoteSwiftPackageReference "hstack-snap-to-scroll" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftui-library/hstack-snap-to-scroll";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5262158C28D578CA00C89D2A /* SnapToScroll */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5262158B28D578C900C89D2A /* XCRemoteSwiftPackageReference "hstack-snap-to-scroll" */;
+			productName = SnapToScroll;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E98F7B4828CF7867007A6024 /* Project object */;
 }
