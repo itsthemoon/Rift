@@ -17,7 +17,7 @@ struct SearchBar: View {
                 .foregroundColor(Color("LightGrey"))
             HStack {
                 Image(systemName: "magnifyingglass")
-                TextField("Search...", text: $searchText) { startedEditing in
+                TextField("Search...", text: $searchingstatus.searchingText) { startedEditing in
                      if startedEditing {
                          withAnimation {
                              searchingstatus.searching = true
@@ -29,9 +29,12 @@ struct SearchBar: View {
                      }
                  }
                  .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
-                 .modifier(TextFieldClearButton(text: $searchText))
+                 .modifier(TextFieldClearButton(text: $searchingstatus.searchingText))
                  .multilineTextAlignment(.leading)
             }
+            .onSubmit {
+                                 self.searchingstatus.searching = false
+                             }
             .foregroundColor(.gray)
             .padding(.leading, 13)
              }
@@ -51,7 +54,7 @@ struct TextFieldClearButton: ViewModifier {
             
             if !text.isEmpty {
                 Button(
-                    action: { self.text = ""; searchingstatus.searching = false},
+                    action: { self.text = ""; searchingstatus.searching = false; searchingstatus.searchingText = ""},
                     label: {
                         Image(systemName: "x.circle")
                             .foregroundColor(Color(UIColor.opaqueSeparator))

@@ -10,16 +10,8 @@ import UIKit
 
 class AreWeSearching: ObservableObject{
     @Published var searching = false
+    @Published var searchingText = ""
 }
-
-//class ViewController: UIViewController {
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-//        view.addGestureRecognizer(tapGesture)
-//    }
-//}
-
 
 struct ContentView: View {
     @StateObject var searchingstatus = AreWeSearching()
@@ -78,7 +70,7 @@ struct ContentView: View {
                             }
                             }
                         }){
-                            if searchingstatus.searching {
+                            if searchingstatus.searching && searchingstatus.searchingText == ""{
                                 Image(systemName: "xmark")
                                     .padding(.trailing, 15.0)
                                     .foregroundColor(Color.black)
@@ -131,7 +123,10 @@ struct ContentView: View {
                 case 1:
                     if searchingstatus.searching {
                         DirectSearch()
-                    } else {
+                            .environmentObject(searchingstatus)
+                } else if !searchingstatus.searching && searchingstatus.searchingText != "" {
+                    SearchResults()
+            }else{
                         Search()
                     }
                 case 2:

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DirectSearch: View {
+    @EnvironmentObject var searchingstatus: AreWeSearching
+
     
     var body: some View {
         VStack(spacing: 15.0) {
@@ -18,7 +20,10 @@ struct DirectSearch: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .opacity(/*@START_MENU_TOKEN@*/0.4/*@END_MENU_TOKEN@*/)
             HStack {
-            Button(action: {}){
+                Button(action: {
+                    searchingstatus.searching = false
+                    searchingstatus.searchingText = "Skirts"
+                }){
                 HStack{
                 Text("Skirts")
                 .font(.title2)
@@ -40,7 +45,10 @@ struct DirectSearch: View {
             .padding(.horizontal)
             
             HStack {
-            Button(action: {}){
+                Button(action: {
+                                searchingstatus.searching = false
+                                searchingstatus.searchingText = "Vintage Nike"
+                            }){
                 HStack{
                 Text("Vintage Nike")
                 .font(.title2)
@@ -62,7 +70,10 @@ struct DirectSearch: View {
             .padding(.horizontal)
             
             HStack {
-            Button(action: {}){
+                Button(action: {
+                                searchingstatus.searching = false
+                                searchingstatus.searchingText = "Blazer"
+                            }){
                 HStack{
                 Text("Blazer")
                 .font(.title2)
