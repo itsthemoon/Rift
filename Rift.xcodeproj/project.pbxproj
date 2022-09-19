@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9411EED28D3A9D600DB590D /* DirectSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9411EEC28D3A9D600DB590D /* DirectSearch.swift */; };
 		5262158A28D3940700C89D2A /* HowItWorks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5262158928D3940700C89D2A /* HowItWorks.swift */; };
 		5262158D28D578CA00C89D2A /* SnapToScroll in Frameworks */ = {isa = PBXBuildFile; productRef = 5262158C28D578CA00C89D2A /* SnapToScroll */; };
 		E98F7B7528CF786A007A6024 /* RiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B4D28CF7867007A6024 /* RiftApp.swift */; };
@@ -19,6 +20,7 @@
 		E98F7B9728CF8CC4007A6024 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B9628CF8CC4007A6024 /* Search.swift */; };
 		E98F7B9928CF8CCD007A6024 /* Closet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B9828CF8CCD007A6024 /* Closet.swift */; };
 		E98F7B9B28CF8CD3007A6024 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B9A28CF8CD3007A6024 /* Account.swift */; };
+		E98F7B9E28D3944A007A6024 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F7B9D28D3944A007A6024 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E9411EEC28D3A9D600DB590D /* DirectSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectSearch.swift; sourceTree = "<group>"; };
 		5262158928D3940700C89D2A /* HowItWorks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorks.swift; sourceTree = "<group>"; };
 		E98F7B4D28CF7867007A6024 /* RiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiftApp.swift; sourceTree = "<group>"; };
 		E98F7B4E28CF7867007A6024 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		E98F7B9628CF8CC4007A6024 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		E98F7B9828CF8CCD007A6024 /* Closet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closet.swift; sourceTree = "<group>"; };
 		E98F7B9A28CF8CD3007A6024 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		E98F7B9D28D3944A007A6024 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		E98F7B4C28CF7867007A6024 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E98F7B9C28D393FB007A6024 /* Components */,
 				E98F7B8928CF8BF2007A6024 /* Views */,
 				E98F7B4D28CF7867007A6024 /* RiftApp.swift */,
 				E98F7B4E28CF7867007A6024 /* ContentView.swift */,
@@ -123,9 +128,18 @@
 				E98F7B9628CF8CC4007A6024 /* Search.swift */,
 				E98F7B9828CF8CCD007A6024 /* Closet.swift */,
 				E98F7B9A28CF8CD3007A6024 /* Account.swift */,
+				E9411EEC28D3A9D600DB590D /* DirectSearch.swift */,
 				5262158928D3940700C89D2A /* HowItWorks.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E98F7B9C28D393FB007A6024 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E98F7B9D28D3944A007A6024 /* SearchBar.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,10 +307,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E98F7B9928CF8CCD007A6024 /* Closet.swift in Sources */,
+				E98F7B9E28D3944A007A6024 /* SearchBar.swift in Sources */,
 				E98F7B7728CF786A007A6024 /* ContentView.swift in Sources */,
 				E98F7B9728CF8CC4007A6024 /* Search.swift in Sources */,
 				E98F7B9528CF8CBC007A6024 /* Home.swift in Sources */,
 				E98F7B7528CF786A007A6024 /* RiftApp.swift in Sources */,
+				E9411EED28D3A9D600DB590D /* DirectSearch.swift in Sources */,
 				5262158A28D3940700C89D2A /* HowItWorks.swift in Sources */,
 				E98F7B9B28CF8CD3007A6024 /* Account.swift in Sources */,
 			);

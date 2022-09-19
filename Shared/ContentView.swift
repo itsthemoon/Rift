@@ -6,12 +6,28 @@
 //
 
 import SwiftUI
+import UIKit
+
+class AreWeSearching: ObservableObject{
+    @Published var searching = false
+}
+
+//class ViewController: UIViewController {
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+//        view.addGestureRecognizer(tapGesture)
+//    }
+//}
+
 
 struct ContentView: View {
+    @StateObject var searchingstatus = AreWeSearching()
     
     @State var selectedIndex = 0
     @State var prevView = ""
     @State var accountShowing = false
+    @State var searchText = ""
     
     let tabBarImageNames = ["shippingbox", "magnifyingglass", "tshirt"]
     
@@ -29,7 +45,8 @@ struct ContentView: View {
                     case 0:
                         Text("Home")
                     case 1:
-                        Text("Search")
+                        SearchBar(searchText: $searchText)
+                            .environmentObject(searchingstatus)
                     case 2:
                         Text("Closet")
                     default:
@@ -39,6 +56,10 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                         Button(action: {
+                            if searchingstatus.searching {
+                                selectedIndex = 1
+                                searchingstatus.searching = false
+                            } else {
                             switch selectedIndex {
                             case 0:
                                 accountShowing = true
@@ -55,12 +76,19 @@ struct ContentView: View {
                             default:
                                 prevView = ""
                             }
+                            }
                         }){
+                            if searchingstatus.searching {
+                                Image(systemName: "xmark")
+                                    .padding(.trailing, 15.0)
+                                    .foregroundColor(Color.black)
+                            } else {
                             // Button design
                             Image(systemName: "person")
                                 .padding(.trailing, 15.0)
                                 .foregroundColor(Color.black)
                             }
+                }
                         }
                     }
             } else {
@@ -101,7 +129,11 @@ struct ContentView: View {
                 case 0:
                     Home()
                 case 1:
-                    Search()
+                    if searchingstatus.searching {
+                        DirectSearch()
+                    } else {
+                        Search()
+                    }
                 case 2:
                     Closet()
                 case 3:
@@ -124,7 +156,7 @@ struct ContentView: View {
                     })
                 }
             }
-            .opacity(accountShowing ? 0: 1)
+            .opacity(accountShowing || searchingstatus.searching ? 0: 1)
         }
     }
 
