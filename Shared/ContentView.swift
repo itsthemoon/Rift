@@ -142,6 +142,10 @@ struct ContentView: View {
             ForEach(0..<3) { num in
                 Button(action: {
                     selectedIndex = num
+                    if selectedIndex == 1 {
+                        searchingstatus.searching = false
+                        searchingstatus.searchingText = ""
+                    }
                 }, label: {
                     Spacer()
                     Image(systemName: tabBarImageNames[num])

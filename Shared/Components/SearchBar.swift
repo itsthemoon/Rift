@@ -54,7 +54,7 @@ struct TextFieldClearButton: ViewModifier {
             
             if !text.isEmpty {
                 Button(
-                    action: { self.text = ""; searchingstatus.searching = false; searchingstatus.searchingText = ""},
+                    action: { self.text = ""; searchingstatus.searching = true; searchingstatus.searchingText = ""},
                     label: {
                         Image(systemName: "x.circle")
                             .foregroundColor(Color(UIColor.opaqueSeparator))
