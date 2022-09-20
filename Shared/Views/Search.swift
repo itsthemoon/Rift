@@ -12,16 +12,19 @@ struct Search: View {
     var body: some View {
         
         ScrollView (showsIndicators: false){
-            Image("screenshot2")
+            Image("screenshot3")
                 .resizable()
                 .scaledToFill()
                 .overlay(
                     Text("Categories")
                         .font(.title)
                         .fontWeight(.bold)
-                        .padding(.vertical)
+                        .padding(8)
                         .foregroundColor(Color.white)
+                        .background(Color.black)
+//                        .cornerRadius(15)
                 )
+//                .cornerRadius(20)
             
             // Items
             ScrollView(.horizontal, showsIndicators: false) {
@@ -32,16 +35,19 @@ struct Search: View {
                 }
             }
             Divider()
-            Image("screenshot2")
+            Image("screenshot5")
                 .resizable()
                 .scaledToFit()
                 .overlay(
                     Text("Pick For You")
                         .font(.title)
                         .fontWeight(.bold)
-                        .padding(.vertical)
+                        .padding(8)
                         .foregroundColor(Color.white)
+                        .background(Color.black)
+//                        .cornerRadius(15)
                 )
+//                .cornerRadius(20)
             
             // Items
             ScrollView(.horizontal, showsIndicators: false) {
@@ -52,16 +58,19 @@ struct Search: View {
                 }
             }
             Divider()
-            Image("screenshot2")
+            Image("screenshot4")
                 .resizable()
                 .scaledToFit()
                 .overlay(
                     Text("Collections")
                         .font(.title)
                         .fontWeight(.bold)
-                        .padding(.vertical)
+                        .padding(8)
                         .foregroundColor(Color.white)
+                        .background(Color.black)
+//                        .cornerRadius(15)
                 )
+//                .cornerRadius(20)
             
             // Items
             ScrollView(.horizontal, showsIndicators: false) {
