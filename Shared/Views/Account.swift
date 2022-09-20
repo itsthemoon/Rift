@@ -78,15 +78,18 @@ struct Account: View {
                         }
                     }
                 }
-                .padding(.top)
             }
-            Button("Sign Out") {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+            HStack {
+                Spacer()
+                Button(action: {}){
+                    Text("Sign Out")
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(Color(hue: 0.866, saturation: 0.0, brightness: 0.806))
+                .foregroundColor(Color.black)
+                .padding([.leading, .bottom, .trailing])
+                Spacer()
             }
-            .padding()
-            .background(Color(hue: 0.866, saturation: 0.0, brightness: 0.806))
-            .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
-            .cornerRadius(/*@START_MENU_TOKEN@*/15.0/*@END_MENU_TOKEN@*/)
         }
         .background(Color(red: 0.9490196078431372, green: 0.9490196078431372, blue: 0.9647058823529412))
     }

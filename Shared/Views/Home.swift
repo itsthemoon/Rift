@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import SnapToScroll
 
 struct Home: View {
     private func getScale(proxy: GeometryProxy) -> CGFloat {
         var scale: CGFloat = 1
         let screenSize: CGFloat = UIScreen.main.bounds.width
         
-        //access phone screen size/2 oinstead of 215
+        //access phone screen size/2 instead of 215
         let x = abs((screenSize * 0.5) - proxy.frame(in: .global).midX)
     
         if x < 100  {
@@ -33,20 +34,18 @@ struct Home: View {
                     .fontWeight(.bold)
                 
                 // Items
-                NavigationView {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 8) {
-                            ForEach(0 ..< 30) { num in
-                                    Image("screenshot")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .cornerRadius(20)
-                                        .clipped()
-                                        .frame(width: 300, height: 400)
-                            }
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 8) {
+                        ForEach(0 ..< 30) { num in
+                                Image("screenshot")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .cornerRadius(20)
+                                    .clipped()
+                                    .frame(width: 300, height: 400)
                         }
-                        .padding(32)
                     }
+                    .padding(32)
                 }
             }
         }
