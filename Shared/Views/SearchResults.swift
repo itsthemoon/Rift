@@ -90,8 +90,11 @@ struct fakeCard: View {
             }
             .padding(.bottom)
             
+            
         Spacer()
         }
+        } .safeAreaInset(edge: .bottom) {
+            FilterSortButton()
         }
         
     }
